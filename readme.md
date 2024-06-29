@@ -87,7 +87,7 @@ http://localhost:1111
 
   - **Example**:
     ```bash
-    curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Updated Title\", \"author\":\"Updated Author\"}" http://localhost:1111/books/1
+    curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Updated Title\", \"author\":\"Updated Author\"}" http://localhost:1111/books/update/1
     ```
 
 - **Delete a Book**
@@ -182,7 +182,7 @@ http://localhost:1111
 
   - **Example**:
     ```bash
-    curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"Updated Name\", \"email\":\"updated@example.com\"}" http://localhost:1111/users/1
+    curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"Updated Name\", \"email\":\"updated@example.com\"}" http://localhost:1111/users/update/1
     ```
 
 - **Delete a User**
