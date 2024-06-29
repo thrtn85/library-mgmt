@@ -34,23 +34,32 @@ func GetBooks(c *gin.Context) {
 // UpdateBook handles PUT requests to update book information
 func UpdateBook(c *gin.Context) {
 	var book models.Book
+	bookID := c.Param("id")
 	if err := c.ShouldBindJSON(&book); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
 
 	var existingBook models.Book
-	if err := config.DB.First(&existingBook, book.ID).Error; err != nil {
+	if err := config.DB.First(&existingBook, bookID).Error; err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"error": "Book not found"})
 		return
 	}
 
 	// Update the book's information
-	existingBook.Title = book.Title
-	existingBook.Author = book.Author
+	if book.Title != "" {
+		existingBook.Title = book.Title
+	}
+	if book.Author != "" {
+		existingBook.Author = book.Author
+	}
+	
 
 	// Save the updated book to the database
-	config.DB.Save(&existingBook)
+	if err := config.DB.Save(&existingBook).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update book"})
+		return
+	}
 
 	c.JSON(http.StatusOK, existingBook)
 }

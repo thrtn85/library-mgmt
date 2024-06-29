@@ -34,20 +34,26 @@ func GetUsers(c *gin.Context) {
 // UpdateUser handles PUT requests to update user information
 func UpdateUser(c *gin.Context) {
 	var user models.User
+	userID := c.Param("id")
 	if err := c.ShouldBindJSON(&user); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
 
 	var existingUser models.User
-	if err := config.DB.First(&existingUser, user.ID).Error; err != nil {
+	if err := config.DB.First(&existingUser, userID).Error; err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"error": "User not found"})
 		return
 	}
 
 	// Update the user's information
-	existingUser.Name = user.Name
-	existingUser.Email = user.Email
+	if user.Name != "" {
+		existingUser.Name = user.Name
+	}
+	if user.Email != "" {
+		existingUser.Email = user.Email
+	}
+	
 
 	// Save the updated user to the database
 	config.DB.Save(&existingUser)
