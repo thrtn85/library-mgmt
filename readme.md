@@ -7,7 +7,7 @@ The Bookstore API provides endpoints to manage books and users. It allows you to
 ### Base URL
 
 ```
-http://localhost:8080
+http://localhost:1111
 ```
 
 ### Endpoints
@@ -38,7 +38,7 @@ http://localhost:8080
 
   - **Example**:
     ```bash
-    curl -X POST -H "Content-Type: application/json" -d "{\"title\":\"The Go Programming Language\", \"author\":\"Alan A. A. Donovan\"}" http://localhost:8080/books
+    curl -X POST -H "Content-Type: application/json" -d "{\"title\":\"The Go Programming Language\", \"author\":\"Alan A. A. Donovan\"}" http://localhost:1111/books
     ```
 
 - **Retrieve All Books**
@@ -60,11 +60,11 @@ http://localhost:8080
 
   - **Example**:
     ```bash
-    curl http://localhost:8080/books
+    curl http://localhost:1111/books
     ```
 
 - **Update a Book**
-  - **URL**: `/books/:id`
+  - **URL**: `/books/update/:id`
   - **Method**: `PUT`
   - **Description**: Updates an existing book by ID.
   - **Request Body**:
@@ -87,7 +87,7 @@ http://localhost:8080
 
   - **Example**:
     ```bash
-    curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Updated Title\", \"author\":\"Updated Author\"}" http://localhost:8080/books/1
+    curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Updated Title\", \"author\":\"Updated Author\"}" http://localhost:1111/books/1
     ```
 
 - **Delete a Book**
@@ -103,7 +103,7 @@ http://localhost:8080
 
   - **Example**:
     ```bash
-    curl -X DELETE http://localhost:8080/books/1
+    curl -X DELETE http://localhost:1111/books/1
     ```
 
 #### Users
@@ -133,7 +133,7 @@ http://localhost:8080
 
   - **Example**:
     ```bash
-    curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"John Doe\", \"email\":\"john@example.com\", \"password\":\"password\"}" http://localhost:8080/users
+    curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"John Doe\", \"email\":\"john@example.com\", \"password\":\"password\"}" http://localhost:1111/users
     ```
 
 - **Retrieve All Users**
@@ -155,11 +155,11 @@ http://localhost:8080
 
   - **Example**:
     ```bash
-    curl http://localhost:8080/users
+    curl http://localhost:1111/users
     ```
 
 - **Update a User**
-  - **URL**: `/users/:id`
+  - **URL**: `/users/update/:id`
   - **Method**: `PUT`
   - **Description**: Updates an existing user by ID.
   - **Request Body**:
@@ -182,7 +182,7 @@ http://localhost:8080
 
   - **Example**:
     ```bash
-    curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"Updated Name\", \"email\":\"updated@example.com\"}" http://localhost:8080/users/1
+    curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"Updated Name\", \"email\":\"updated@example.com\"}" http://localhost:1111/users/1
     ```
 
 - **Delete a User**
@@ -198,7 +198,7 @@ http://localhost:8080
 
   - **Example**:
     ```bash
-    curl -X DELETE http://localhost:8080/users/1
+    curl -X DELETE http://localhost:1111/users/1
     ```
 
 ### Error Handling
@@ -233,47 +233,47 @@ All endpoints will return appropriate HTTP status codes and error messages in ca
 #### Create a Book
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d "{\"title\":\"The Go Programming Language\", \"author\":\"Alan A. A. Donovan\"}" http://localhost:8080/books
+curl -X POST -H "Content-Type: application/json" -d "{\"title\":\"The Go Programming Language\", \"author\":\"Alan A. A. Donovan\"}" http://localhost:1111/books
 ```
 
 #### Retrieve All Books
 
 ```bash
-curl http://localhost:8080/books
+curl http://localhost:1111/books
 ```
 
 #### Update a Book
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Updated Title\", \"author\":\"Updated Author\"}" http://localhost:8080/books/1
+curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Updated Title\", \"author\":\"Updated Author\"}" http://localhost:1111/books/1
 ```
 
 #### Delete a Book
 
 ```bash
-curl -X DELETE http://localhost:8080/books/1
+curl -X DELETE http://localhost:1111/books/1
 ```
 
 #### Create a User
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"John Doe\", \"email\":\"john@example.com\", \"password\":\"password\"}" http://localhost:8080/users
+curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"John Doe\", \"email\":\"john@example.com\", \"password\":\"password\"}" http://localhost:1111/users
 ```
 
 #### Retrieve All Users
 
 ```bash
-curl http://localhost:8080/users
+curl http://localhost:1111/users
 ```
 
 #### Update a User
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"Updated Name\", \"email\":\"updated@example.com\"}" http://localhost:8080/users/1
+curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"Updated Name\", \"email\":\"updated@example.com\"}" http://localhost:1111/users/1
 ```
 
 #### Delete a User
 
 ```bash
-curl -X DELETE http://localhost:8080/users/1
+curl -X DELETE http://localhost:1111/users/1
 ```
