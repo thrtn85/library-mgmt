@@ -64,7 +64,7 @@ http://localhost:1111
     ```
 
 - **Update a Book**
-  - **URL**: `/books/update/:id`
+  - **URL**: `/books/:id`
   - **Method**: `PUT`
   - **Description**: Updates an existing book by ID.
   - **Request Body**:
@@ -87,7 +87,7 @@ http://localhost:1111
 
   - **Example**:
     ```bash
-    curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Updated Title\", \"author\":\"Updated Author\"}" http://localhost:1111/books/update/1
+    curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Updated Title\", \"author\":\"Updated Author\"}" http://localhost:1111/books/1
     ```
 
 - **Delete a Book**
@@ -159,7 +159,7 @@ http://localhost:1111
     ```
 
 - **Update a User**
-  - **URL**: `/users/update/:id`
+  - **URL**: `/users/:id`
   - **Method**: `PUT`
   - **Description**: Updates an existing user by ID.
   - **Request Body**:
@@ -182,7 +182,7 @@ http://localhost:1111
 
   - **Example**:
     ```bash
-    curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"Updated Name\", \"email\":\"updated@example.com\"}" http://localhost:1111/users/update/1
+    curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"Updated Name\", \"email\":\"updated@example.com\"}" http://localhost:1111/users/1
     ```
 
 - **Delete a User**
@@ -245,7 +245,7 @@ curl http://localhost:1111/books
 #### Update a Book
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Updated Title\", \"author\":\"Updated Author\"}" http://localhost:1111/books/update/1
+curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Updated Title\", \"author\":\"Updated Author\"}" http://localhost:1111/books/1
 ```
 
 #### Delete a Book
@@ -269,7 +269,7 @@ curl http://localhost:1111/users
 #### Update a User
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"Updated Name\", \"email\":\"updated@example.com\"}" http://localhost:1111/users/update/1
+curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"Updated Name\", \"email\":\"updated@example.com\"}" http://localhost:1111/users/1
 ```
 
 #### Delete a User
