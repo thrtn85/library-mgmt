@@ -245,7 +245,7 @@ curl http://localhost:1111/books
 #### Update a Book
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Updated Title\", \"author\":\"Updated Author\"}" http://localhost:1111/books/1
+curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Updated Title\", \"author\":\"Updated Author\"}" http://localhost:1111/books/update/1
 ```
 
 #### Delete a Book
