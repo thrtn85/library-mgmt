@@ -1,8 +1,8 @@
-## Bookstore API Documentation
+## Library Management API Documentation
 
 ### Overview
 
-The Bookstore API provides endpoints to manage books and users. It allows you to create, retrieve, update, and delete books and users. The API uses JSON for data exchange and is built using Go, Gin, and GORM with SQLite as the database.
+The Library Management API provides endpoints to manage a collection of books and users. It allows you to create, retrieve, update, and delete books and users. The API uses JSON for data exchange and is built using Go, Gin, and GORM with SQLite as the database.
 
 ### Base URL
 

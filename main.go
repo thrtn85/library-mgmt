@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/thrtn85/bookstore/config"
-	"github.com/thrtn85/bookstore/routes"
+	"github.com/thrtn85/library-mgmt/config"
+	"github.com/thrtn85/library-mgmt/routes"
 )
 
 func main() {

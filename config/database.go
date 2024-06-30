@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/glebarez/sqlite"
-	"github.com/thrtn85/bookstore/models"
+	"github.com/thrtn85/library-mgmt/models"
 	"gorm.io/gorm"
 )
 

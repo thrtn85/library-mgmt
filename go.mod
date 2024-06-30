@@ -1,4 +1,4 @@
-module github.com/thrtn85/bookstore
+module github.com/thrtn85/library-mgmt
 
 go 1.22.4
 

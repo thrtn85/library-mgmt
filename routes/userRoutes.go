@@ -3,7 +3,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/thrtn85/bookstore/controllers"
+	"github.com/thrtn85/library-mgmt/controllers"
 )
 
 // sests up the routes for book-related endpoints

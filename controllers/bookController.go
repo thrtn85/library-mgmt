@@ -4,8 +4,8 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/thrtn85/bookstore/config"
-	"github.com/thrtn85/bookstore/models"
+	"github.com/thrtn85/library-mgmt/config"
+	"github.com/thrtn85/library-mgmt/models"
 
 	"github.com/gin-gonic/gin"
 )
