@@ -269,7 +269,7 @@ curl http://localhost:1111/users
 #### Update a User
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"Updated Name\", \"email\":\"updated@example.com\"}" http://localhost:1111/users/1
+curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"Updated Name\", \"email\":\"updated@example.com\"}" http://localhost:1111/users/update/1
 ```
 
 #### Delete a User
