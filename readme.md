@@ -63,6 +63,28 @@ http://localhost:1111
     curl http://localhost:1111/books
     ```
 
+- **Retrieve a Specific Book**
+  - **URL**: `/books/:id`
+  - **Method**: `GET`
+  - **Description**: Retrieves a specific book.
+  - **Response**:
+    ```json
+    [
+      {
+        "id": "int",
+        "title": "string",
+        "author": "string",
+        "created_at": "timestamp",
+        "updated_at": "timestamp"
+      }
+    ]
+    ```
+
+  - **Example**:
+    ```bash
+    curl http://localhost:1111/books/2
+    ```
+
 - **Update a Book**
   - **URL**: `/books/:id`
   - **Method**: `PUT`
@@ -158,6 +180,28 @@ http://localhost:1111
     curl http://localhost:1111/users
     ```
 
+- **Retrieve a Specific User**
+  - **URL**: `/users/:id`
+  - **Method**: `GET`
+  - **Description**: Retrieves a specific user.
+  - **Response**:
+    ```json
+    [
+      {
+        "id": "int",
+        "name": "string",
+        "email": "string",
+        "created_at": "timestamp",
+        "updated_at": "timestamp"
+      }
+    ]
+    ```
+
+  - **Example**:
+    ```bash
+    curl http://localhost:1111/users/1
+    ```
+
 - **Update a User**
   - **URL**: `/users/:id`
   - **Method**: `PUT`
@@ -242,6 +286,12 @@ curl -X POST -H "Content-Type: application/json" -d "{\"title\":\"The Go Program
 curl http://localhost:1111/books
 ```
 
+#### Retrieve a Specific Book
+
+```bash
+curl http://localhost:1111/books/1
+```
+
 #### Update a Book
 
 ```bash
@@ -264,6 +314,12 @@ curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"John Doe\", \"e
 
 ```bash
 curl http://localhost:1111/users
+```
+
+#### Retrieve a Specific User
+
+```bash
+curl http://localhost:1111/users/1
 ```
 
 #### Update a User
