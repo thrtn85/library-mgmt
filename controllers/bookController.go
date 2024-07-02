@@ -31,6 +31,19 @@ func GetBooks(c *gin.Context) {
 	c.JSON(http.StatusOK, books)
 }
 
+// GetBookByID handles GET requests get a specific book
+func GetBookByID(c *gin.Context) {
+	var book models.Book
+	bookID := c.Param("id")
+	// Find the book by ID
+	if err := config.DB.First(&book, bookID).Error; err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Book not found"})
+		return
+	}
+
+	c.JSON(http.StatusOK, book)
+}
+
 // UpdateBook handles PUT requests to update book information
 func UpdateBook(c *gin.Context) {
 	var book models.Book
